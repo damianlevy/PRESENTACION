@@ -13,7 +13,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 .header h1 {font-size:2.5em;margin-bottom:15px;}
 .version-badge {display:inline-block;background:rgba(255,255,255,0.2);padding:8px 20px;border-radius:20px;margin-top:10px;}
 .section {background:white;border-radius:15px;padding:30px;margin-bottom:25px;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
-.section-title {background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;}
+.section-title {background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;}
 .btn-ref {background:#667eea;color:white;border:none;padding:5px 12px;border-radius:15px;cursor:pointer;font-size:0.85em;margin-left:10px;transition:all 0.3s;}
 .btn-ref:hover {background:#5a67d8;transform:translateY(-1px);}
 .alert {padding:15px;border-radius:10px;margin:20px 0;border-left:4px solid;}
@@ -45,7 +45,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 .concept-key {display:inline-block;background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.8em;margin-left:5px;}
 .modal {display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 .modal-content {position:relative;background:white;margin:50px auto;width:90%;max-width:900px;max-height:85vh;border-radius:15px;display:flex;flex-direction:column;}
-.modal-header {background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:20px;border-radius:15px 15px 0 0;display:flex;justify-content:space-between;align-items:center;}
+.modal-header {background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;padding:20px;border-radius:15px 15px 0 0;display:flex;justify-content:space-between;align-items:center;}
 .modal-close {color:white;font-size:28px;cursor:pointer;background:none;border:none;}
 .modal-body {padding:30px;overflow-y:auto;flex:1;}
 .modal-footer {padding:15px 20px;background:#f8f9fa;border-top:1px solid #e2e8f0;text-align:right;}
@@ -245,10 +245,11 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="decision-header">MOMENTO 1: INSCRIPCIÓN SPAS Y AUTORIZACIÓN BRASIL</div>
 <div class="options-grid">
 <div class="option-yes">
-<strong style="font-size:1.05em;">✅ SÍ - Ambas condiciones: <span style="font-weight:bold;">CONTINÚA MOMENTO 2</span></strong>
+<strong style="font-size:1.05em;">✅ SÍ - CUMPLE CONDICIONES:</strong>
 <ul style="margin-top:10px;font-size:0.9em;">
 <li>• Agente Institorio OK</li>
 <li>• BB/BACEN OK</li>
+<li>• CONTINÚA MOMENTO 2</li>
 </ul>
 <span class="box-id">[1]</span>
 </div>
@@ -367,18 +368,26 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="section" id="b9">
 <div class="section-title" style="background:linear-gradient(135deg,#38a169,#2f855a);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;">🛤️ RUTAS DE ADQUISICIÓN <span class="concept-key">Escenarios Post-Manifestación</span></div>
 <div class="rutas-box">
-<div class="rutas-header" style="background:#38a169;color:white;padding:12px;margin:-20px -20px 20px;border-radius:10px 10px 0 0;font-weight:bold;text-align:center;">RUTAS DE ADQUISICIÓN (requisito previo: Manifestación de Voluntad emitida)</div>
+<div class="rutas-header" style="background:#38a169;color:white;padding:12px;margin:-20px -20px 20px;border-radius:10px 10px 0 0;font-weight:bold;text-align:center;"><span>RUTAS DE ADQUISICIÓN</span><span style="display:block;font-weight:normal;font-size:0.9em;margin-top:4px;">(requisito previo: Manifestación de Voluntad emitida)</span></div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
 <div style="background:#f0fff4;font-size:1.1em;padding:20px;border-radius:10px;border:4px solid #38a169;">
-<h4 style="color:#22543d;margin-bottom:10px;">RUTA OPTIMA - CON AUTORIZACIÓN BCRA (Secuencial)</h4>
+<h4 style="color:#22543d;margin-bottom:10px;">
+<span style="font-size:1.15em;">RUTA OPTIMA</span>
+<span style="font-weight:normal;"> – CON AUTORIZACIÓN BCRA</span>
+<span style="font-weight:normal;font-size:0.9em;"> (Secuencial)</span>
+</h4>
 <ol style="margin-top:10px;padding-left:20px;">
 <li>Compra 51% por USD 1 (precio fijo e inamovible)</li>
 <li>Compra 49% SPAS</li>
 <li>Simultáneo: 49% Decreditos</li>
 </ol>
 </div>
-<div style="background:#fef5e7;font-size:1.1em;padding:20px;border-radius:10px;border:2px solid #ed8936;">
-<h4 style="color:#744210;margin-bottom:10px;">RUTA INTERMEDIA - SIN AUTORIZACIÓN BCRA (Simultánea al final del proceso - +4 años)</h4>
+<div style="background:#ffffff;font-size:1.1em;padding:20px;border-radius:10px;border:2px solid #9ae6b4;">
+<h4 style="color:#744210;margin-bottom:10px;">
+<span style="font-size:1.15em;">RUTA INTERMEDIA</span>
+<span style="font-weight:normal;"> – SIN AUTORIZACIÓN BCRA</span>
+<span style="font-weight:normal;font-size:0.9em;"> (Simultánea al final del proceso - +4 años)</span>
+</h4>
 <ul style="margin-top:10px;padding-left:20px;">
 <li>Adquisición de la SPAS (hasta el 100%) mediante mecanismos alternativos</li>
 <li>Junto con 49% Decreditos</li>
@@ -447,7 +456,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div style="margin-bottom:15px;font-size:0.9em;">
             Se activa en <strong>MOMENTO 2 – SÍ MANIFIESTA</strong> y opera principalmente en los <strong>Escenarios Optimista e Intermedio</strong>.
         </div>
-<div style="background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:25px;border-radius:15px;text-align:center;">
+<div style="background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;padding:25px;border-radius:15px;text-align:center;">
 <h3 style="margin-bottom:20px;">🔄 ACTIVACIÓN CON LA MANIFESTACIÓN DE VOLUNTAD</h3>
 <div style="display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin:20px 0;">
 <div style="background:rgba(255,255,255,0.2);padding:10px 15px;border-radius:10px;">Opción 51% SPAS</div>
