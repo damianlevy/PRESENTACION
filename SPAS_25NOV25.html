@@ -110,16 +110,6 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
     font-size: 1.1em;
 }
 
-/* Ajustes RUTA PESIMISTA (bloque b8) */
-#b8 {
-    background: #ffffff;
-    color: #742a2a;
-    border: 3px solid #e53e3e;
-    padding: 14px 16px;
-}
-#b8 h3 {
-    color: #e53e3e;
-}
 
 /* Destacar sección RUTAS DE ADQUISICIÓN */
  #b9 .section-title {font-weight:bold;
@@ -408,20 +398,23 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 </div>
 <span class="box-id">[9]</span>
 </div>
-</div><!-- BLOQUE 5: RUTA PESIMISTA -->
-<div class="highlighted-box" id="b8">
-<h3>⚠️ RUTA PESIMISTA: SIN MANIFESTACIÓN = PROCESO TERMINA</h3>
-<p style="margin-top:6px;font-size:0.9em;font-weight:bold;">
-            Consecuencia directa del MOMENTO 1 - FALTAN CONDICIONES o MOMENTO 2 - NO MANIFIESTA
-        </p>
-<p style="margin-top:10px;">
-            • No se avanza hacia ninguna adquisición<br/>
-            • Solo queda el Mecanismo Económico Sustituto<br/>
-            • SPAS no puede ser adquirida por GPAT/BPAT<br/>
-            • Se ajusta la fórmula de determinación del precio del 49% de Decreditos incorporando el EBITDA SPAS elegible, según el Mecanismo Económico Sustituto
-        </p>
-<button class="btn-ref btn-mini" onclick="scrollToBox('b4')">Origen</button>
+</div><!-- BLOQUE: RUTA PESIMISTA -->
+<div class="section" id="b8">
+<div class="section-title" style="background:linear-gradient(135deg,#c53030,#e53e3e);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;">⚠️ RUTA PESIMISTA <span class="concept-key" style="background:rgba(255,255,255,0.25);">Escenario Pre-Manifestación</span></div>
+<div class="rutas-box" style="border-color:#e53e3e;">
+<div class="rutas-header" style="background:#e53e3e;color:white;padding:12px;margin:-20px -20px 20px;border-radius:10px 10px 0 0;font-weight:bold;text-align:center;">SIN MANIFESTACIÓN = PROCESO TERMINA</div>
+<p style="margin-top:6px;font-size:0.95em;font-weight:bold;color:#742a2a;">
+Consecuencia directa del MOMENTO 1 - FALTAN CONDICIONES o MOMENTO 2 - NO MANIFIESTA
+</p>
+<ul style="margin-top:15px;padding-left:20px;color:#742a2a;">
+<li>No se avanza hacia ninguna adquisición</li>
+<li>Solo queda el Mecanismo Económico Sustituto</li>
+<li>SPAS no puede ser adquirida por GPAT/BPAT</li>
+<li>Se ajusta la fórmula de determinación del precio del 49% de Decreditos incorporando el EBITDA SPAS elegible, según el Mecanismo Económico Sustituto</li>
+</ul>
+<button class="btn-ref btn-mini" onclick="scrollToBox('b4')" style="margin-top:15px;">Origen</button>
 <span class="box-id">[8]</span>
+</div>
 </div>
 <!-- MECANISMOS ECONÓMICOS SUSTITUTOS -->
 <div class="section">
