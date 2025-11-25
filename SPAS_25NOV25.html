@@ -55,6 +55,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 .rutas-box {background:#f8f9fa;border:2px solid #667eea;border-radius:12px;padding:20px;margin:20px 0;}
 .rutas-header {background:#667eea;color:white;padding:12px;margin:-20px -20px 20px;border-radius:10px 10px 0 0;font-weight:bold;text-align:center;}
 
+.decision-box ul { padding-left: 18px; }
 .critical-deadline {
     margin-top: 15px;
     padding: 12px 16px;
@@ -80,6 +81,50 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
         padding: 20px;
     }
 }
+
+/* Identificadores visibles pequeños para QA */
+.box-id {
+    font-size: 0.6em;
+    opacity: 0.6;
+    margin-top: 6px;
+    display: block;
+}
+
+.btn-mini {
+    padding: 2px 8px;
+    font-size: 0.7em;
+    margin-left: 6px;
+}
+
+/* Destacar ESCENARIOS POSIBLES (borde + sombra + algo más alto) */
+#b7 {
+    border-width: 3px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 24px;
+}
+#b7 .decision-header {
+    font-size: 1.1em;
+}
+
+/* Ajustes RUTA PESIMISTA (bloque b8) */
+#b8 {
+    background: #ffffff;
+    color: #742a2a;
+    border: 3px solid #e53e3e;
+    padding: 14px 16px;
+}
+#b8 h3 {
+    color: #e53e3e;
+}
+
+/* Destacar sección RUTAS DE ADQUISICIÓN */
+#b9 .section-title {
+    font-size: 1.6em;
+}
+#b9 .rutas-box {
+    border-width: 3px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
 </style>
 </head>
 <body>
@@ -88,18 +133,18 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
     <!-- HEADER PRINCIPAL -->
     <div class="header">
         <h1>🎯 ESTRATEGIA SPAS - DECREDITOS S.A.</h1>
-        <p>Reestructuración del Negocio de Seguros - Cumplimiento BCRA 3.1.2</p>
-        <div class="version-badge">📄 Presentación Ejecutiva - Documento Definitivo</div>
+        <!-- Eliminado subtítulo BCRA 3.1.2 y badge de documento definitivo -->
     </div>
 
     <!-- PRINCIPIOS RECTORES -->
     <div class="section">
-        <div class="section-title">🎯 PRINCIPIOS RECTORES <span class="concept-key">Fundamentos Estratégicos</span></div>
-        
-        <div class="alert alert-info">
-            <strong>Objetivo Principal:</strong> Crear estructura de negocios que cumpla con BCRA 3.1.2, preserve el valor de Decreditos y mantenga flexibilidad operativa.
+        <div class="section-title">🎯 PRINCIPIOS RECTORES</div>
+
+        <div class="alert alert-info" style="font-size:1.05em;">
+            <strong>OBJETIVOS:</strong><br>
+            <strong>Crear estructura de negocios que cumpla con las normativas vigentes, preserve el valor de Decreditos, permita mantener íntegramente la estrategia original y preserve los intereses de GPAT/BPAT (Accionistas Clase A) y los Accionistas Clase B.</strong>
         </div>
-        
+
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:20px;">
             <div style="background:#f8f9fa;padding:15px;border-radius:10px;border-left:3px solid #667eea;">
                 <strong>✅ Certeza Jurídica</strong>
@@ -130,76 +175,76 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 
     <!-- SECUENCIA DE IMPLEMENTACIÓN -->
     <div class="section">
-        <div class="section-title">📋 SECUENCIA DE IMPLEMENTACIÓN <span class="concept-key">7 Etapas Secuenciales</span></div>
-        
+        <div class="section-title">📋 SECUENCIA DE IMPLEMENTACIÓN <span class="concept-key">7 Etapas</span></div>
+
         <div class="timeline">
             <div class="timeline-step">
-                <div class="step-number">0</div>
+                <div class="step-number">1</div>
                 <div class="step-content">
                     <div class="step-title">Acuerdo Marco y Contratos <button class="btn-ref" onclick="showClause('etapa0')">Ver Cláusula</button></div>
                     <div class="step-desc">Firma de Carta + Contratos derivados (90 días objetivo)</div>
                     <div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Plazos no condicionan vigencia del acuerdo</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">1</div>
+                <div class="step-number">2</div>
                 <div class="step-content">
                     <div class="step-title">Constitución SPAS <button class="btn-ref" onclick="showClause('etapa1')">Ver Cláusula</button></div>
                     <div class="step-desc">IGJ con estructura Ley 22.400</div>
                     <div style="color:#667eea;font-size:0.85em;margin-top:5px;">4 alternativas posibles según contrato</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">2</div>
+                <div class="step-number">3</div>
                 <div class="step-content">
                     <div class="step-title">Inscripción SSN <button class="btn-ref" onclick="showClause('etapa2')">Ver Cláusula</button></div>
                     <div class="step-desc">Aprobación como Sociedad de Productores Asesores de Seguros</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">3</div>
+                <div class="step-number">4</div>
                 <div class="step-content">
                     <div class="step-title">Habilitación Agente Institorio <button class="btn-ref" onclick="showClause('etapa3')">Ver Cláusula</button></div>
                     <div class="step-desc">Requisito para ser adquirida por entidad financiera</div>
                     <div style="color:#667eea;font-size:0.85em;margin-top:5px;">Condición habilitante #1</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">4</div>
+                <div class="step-number">5</div>
                 <div class="step-content">
                     <div class="step-title">Autorización BB/BACEN <button class="btn-ref" onclick="showClause('etapa4')">Ver Cláusula</button></div>
                     <div class="step-desc">Banco Patagonia solicita autorización</div>
                     <div style="color:#667eea;font-size:0.85em;margin-top:5px;">Condición habilitante #2</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">5</div>
+                <div class="step-number">6</div>
                 <div class="step-content">
                     <div class="step-title">Manifestación de Voluntad <button class="btn-ref" onclick="showClause('etapa5')">Ver Cláusula</button></div>
                     <div class="step-desc">GPAT/BPAT compromiso firme e irrevocable del 100%</div>
                     <div style="color:#e53e3e;font-size:0.85em;margin-top:5px;font-weight:bold;">🔴 ACTIVA DOBLE ESPEJO - Efectos plenos inmediatos</div>
                 </div>
             </div>
-            
+
             <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-            
+
             <div class="timeline-step">
-                <div class="step-number">6</div>
+                <div class="step-number">7</div>
                 <div class="step-content">
                     <div class="step-title">Solicitud BCRA <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></div>
                     <div class="step-desc">SI autoriza: Compra 51% USD 1 (precio fijo e inamovible, independiente del patrimonio) | NO autoriza: Mecanismos alternativos</div>
@@ -207,8 +252,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
                 </div>
             </div>
         </div>
-        
-        
+
         <div class="critical-deadline">
             ⏰ <strong>Plazo crítico: 2 años impretermitibles desde la firma.</strong><br>
             Si no hay Manifestación de Voluntad dentro de ese plazo, la SPAS no podrá ser adquirida por GPAT/BPAT y se activa exclusivamente el Mecanismo Económico Sustituto, según Cláusulas 12 y 13 de la Carta de Entendimiento.
@@ -216,13 +260,232 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 
     </div>
 
-    <!-- DOBLE ESPEJO -->
+    <!-- MOMENTOS DE DECISIÓN -->
     <div class="section">
+        <div class="section-title">🎯 MOMENTOS DE DECISIÓN CRÍTICOS <span class="concept-key">3 Momentos Clave</span></div>
+
+        <!-- BLOQUE 1: Momento 1 - cuadro verde/rojo -->
+        <div class="decision-box" id="b1">
+            <div class="decision-header">MOMENTO 1: INSCRIPCIÓN SPAS Y AUTORIZACIÓN BRASIL</div>
+            <div class="options-grid">
+                <div class="option-yes">
+                    <strong style="font-size:1.05em;">✅ SÍ - Ambas condiciones: <span style="font-weight:bold;">CONTINÚA MOMENTO 2</span></strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>• Agente Institorio OK</li>
+                        <li>• BB/BACEN OK</li>
+                    </ul>
+                    <span class="box-id">[1]</span>
+                </div>
+                <div class="option-no" id="b2">
+                    <strong style="font-size:1.05em;">❌ NO - FALTAN CONDICIONES</strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>Espera máximo 2 años</li>
+                        <li><strong>SPAS NO ADQUIRIBLE por GPAT/BPAT</strong></li>
+                        <li><strong>ACTIVA MECANISMO SUSTITUTO</strong></li>
+                    </ul>
+                    <button class="btn-ref btn-mini" onclick="scrollToBox('b8')">CONSECUENCIA</button>
+                    <span class="box-id">[2]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 2: Momento 2 - cuadros verde/rojo -->
+        <div class="decision-box">
+            <div class="decision-header">MOMENTO 2: GPAT/BPAT MANIFIESTA VOLUNTAD DE COMPRA</div>
+            <div class="options-grid">
+                <div class="option-yes" id="b3">
+                    <strong style="font-size:1.05em;">✅ SÍ MANIFIESTA</strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>Compromiso IRREVOCABLE 100%</li>
+                        <li><span style="font-weight:bold;font-size:1.05em;">ACTIVA DOBLE ESPEJO</span></li>
+                        <li>Efectos plenos inmediatos</li>
+                        <li>Bloqueo dividendos</li>
+                    </ul>
+                    <span class="box-id">[3]</span>
+                </div>
+                <div class="option-no" id="b4">
+                    <strong style="font-size:1.05em;">❌ NO MANIFIESTA</strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>Opción expira en 2 años</li>
+                        <li><strong>SPAS NO ADQUIRIBLE por GPAT/BPAT</strong></li>
+                        <li><span style="font-weight:bold;font-size:1.05em;">ACTIVA MECANISMO SUSTITUTO</span></li>
+                    </ul>
+                    <button class="btn-ref btn-mini" onclick="scrollToBox('b8')">CONSECUENCIA</button>
+                    <span class="box-id">[4]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 3: Momento 3 - cuadros verde/rojo -->
+        <div class="decision-box">
+            <div class="decision-header">MOMENTO 3: APROBACIÓN BCRA</div>
+            <div class="options-grid">
+                <div class="option-yes" id="b5">
+                    <strong style="font-size:1.05em;">✅ AUTORIZA</strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>GPAT compra 51% por USD 1 (precio fijo e inamovible)</li>
+                        <li>Ejercicio opciones 49% SPAS + 49% DC</li>
+                        <li><span style="font-weight:bold;font-size:1.05em;">ADQUISICIÓN EFECTIVA</span></li>
+                    </ul>
+                    <span class="box-id">[5]</span>
+                </div>
+                <div class="option-no" id="b6">
+                    <strong style="font-size:1.05em;">❌ NO AUTORIZA</strong>
+                    <ul style="margin-top:10px;font-size:0.9em;">
+                        <li>Compromiso subsiste sin alteración</li>
+                        <li><span style="font-weight:bold;font-size:1.05em;">MECANISMOS ALTERNATIVOS</span></li>
+                        <li>Doble Espejo vigente</li>
+                        <li>Costos incrementales a cargo del comprador</li>
+                    </ul>
+                    <span class="box-id">[6]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 4: Escenarios posibles -->
+        <div class="decision-box" id="b7">
+            <div class="decision-header">ESCENARIOS POSIBLES</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:15px;">
+                <div style="background:#f8f9fa;border-radius:10px;border:1px solid #e2e8f0;padding:12px;">
+                    <strong>OPTIMISTA</strong><span style="font-weight:normal;font-size:0.85em;"> (70%)</span>
+                    <ul style="margin-top:8px;font-size:0.85em;">
+                        <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
+                        <li>Momento 3 = BCRA Autoriza: SÍ</li>
+                        <li>Resultado inicial: adquisición 51%</li>
+                        <li>Resultado final: adquisición completa + 49%</li>
+                    </ul>
+                </div>
+                <div style="background:#f8f9fa;border-radius:10px;border:1px solid #e2e8f0;padding:12px;">
+                    <strong>INTERMEDIO</strong><span style="font-weight:normal;font-size:0.85em;"> (25%)</span>
+                    <ul style="margin-top:8px;font-size:0.85em;">
+                        <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
+                        <li>Momento 3 = BCRA Autoriza: NO</li>
+                        <li>Resultado: se aplica Mecanismo Económico Sustituto</li>
+                    </ul>
+                </div>
+                <div style="background:#f8f9fa;border-radius:10px;border:1px solid #e2e8f0;padding:12px;">
+                    <strong>PESIMISTA</strong><span style="font-weight:normal;font-size:0.85em;"> (5%)</span>
+                    <ul style="margin-top:8px;font-size:0.85em;">
+                        <li>Momento 2 = GPAT/BPAT Manifiesta: NO</li>
+                        <li>Momento 3 = BCRA Autoriza: N/A</li>
+                        <li>Resultado: solo Mecanismo Económico Sustituto</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="box-id">[7]</span>
+        </div>
+
+    </div>
+
+    <!-- BLOQUE 5: RUTA PESIMISTA -->
+    <div class="highlighted-box" id="b8">
+        <h3>⚠️ RUTA PESIMISTA: SIN MANIFESTACIÓN = PROCESO TERMINA</h3>
+        <p style="margin-top:6px;font-size:0.9em;font-weight:bold;">
+            Consecuencia directa del MOMENTO 1 - FALTAN CONDICIONES o MOMENTO 2 - NO MANIFIESTA
+        </p>
+        <p style="margin-top:10px;">
+            • No se avanza hacia ninguna adquisición<br>
+            • Solo queda el Mecanismo Económico Sustituto<br>
+            • SPAS no puede ser adquirida por GPAT/BPAT<br>
+            • Se ajusta la fórmula de determinación del precio del 49% de Decreditos incorporando el EBITDA SPAS elegible, según el Mecanismo Económico Sustituto
+        </p>
+        <button class="btn-ref btn-mini" onclick="scrollToBox('b4')">Origen</button>
+        <span class="box-id">[8]</span>
+    </div>
+
+    <!-- BLOQUE 6: RUTAS DE ADQUISICIÓN -->
+    <div class="section" id="b9">
+        <div class="section-title">🛤️ RUTAS DE ADQUISICIÓN <span class="concept-key">Escenarios Post-Manifestación</span></div>
+
+        <div class="rutas-box">
+            <div class="rutas-header">RUTAS DE ADQUISICIÓN (requisito previo: Manifestación de Voluntad emitida)</div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
+                <div style="background:#ebf8ff;padding:20px;border-radius:10px;border:2px solid #4299e1;">
+                    <h4 style="color:#2c5282;margin-bottom:10px;">RUTA OPTIMA - CON AUTORIZACIÓN BCRA (Secuencial)</h4>
+                    <ol style="margin-top:10px;padding-left:20px;">
+                        <li>Compra 51% por USD 1 (precio fijo e inamovible)</li>
+                        <li>Compra 49% SPAS</li>
+                        <li>Simultáneo: 49% Decreditos</li>
+                    </ol>
+                </div>
+
+                <div style="background:#fef5e7;padding:20px;border-radius:10px;border:2px solid #ed8936;">
+                    <h4 style="color:#744210;margin-bottom:10px;">RUTA INTERMEDIA - SIN AUTORIZACIÓN BCRA (Simultánea al final del proceso - +4 años)</h4>
+                    <ul style="margin-top:10px;padding-left:20px;">
+                        <li>Adquisición de la SPAS (hasta el 100%) mediante mecanismos alternativos</li>
+                        <li>Junto con 49% Decreditos</li>
+                        <li>El compromiso subsiste obligatoriamente según las opciones previstas en el contrato</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="box-id">[9]</span>
+        </div>
+    </div><!-- MECANISMOS ECONÓMICOS SUSTITUTOS -->
+    <div class="section">
+        <div class="section-title">💰 MECANISMOS ECONÓMICOS SUSTITUTOS <span class="concept-key">Protección del Valor</span></div>
+
+        <div class="mechanism-box">
+            <div class="mechanism-title">A: SIN Manifestación de Voluntad —&gt; Protección EBITDA original hipotético DC</div>
+            <ul style="margin-top:10px;font-size:0.95em;">
+                <li>• <span title="EBITDA de la SPAS atribuible a negocios que habrían sido propios de DECREDITOS S.A.">EBITDA SPAS elegible</span> se suma al EBITDA de Decreditos como parte de este</li>
+                <li>• 51% EBITDA SPAS se descuenta del precio 49% DC</li>
+                <li>• Todo calculado en dólares con la misma metodología de Decreditos</li>
+            </ul>
+        </div>
+
+        <div class="mechanism-box">
+            <div class="mechanism-title">B: CON Manifestación pero SIN aprobación BCRA —&gt; Protección EBITDA completo SPAS</div>
+            <p style="margin-top:10px;font-size:0.95em;"><strong>Entre constitución SPAS y Manifestación:</strong> Aplican criterios Caso A</p>
+            <p style="font-size:0.95em;"><strong>Entre Manifestación y compra efectiva:</strong></p>
+            <ul style="font-size:0.95em;">
+                <li>• EBITDA SPAS en su totalidad se suma al EBITDA DC para precio</li>
+                <li>• 51% dividendos del período se descuentan del precio</li>
+                <li>• Todo calculado en dólares con la misma metodología de Decreditos</li>
+            </ul>
+        </div>
+
+        <div class="alert alert-info">
+            <strong>Negocios provenientes de DC:</strong> aquellos cuya fuente de originación comercial, canal y/o cliente correspondan a lo que hubiera sido parte del negocio tradicional de Decreditos S.A. originalmente.
+        </div>
+
+        <button class="btn-ref" onclick="showClause('mecanismo-economico')" style="margin-top:15px;">Ver cláusula completa</button>
+    </div>
+
+    <!-- ESTRUCTURA POST-ADQUISICIÓN -->
+    <div class="section">
+        <div class="section-title">🏛️ ESTRUCTURA POST-ADQUISICIÓN</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
+                <strong>GPAT/BPAT</strong><br>
+                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">51%</span>
+            </div>
+            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
+                <strong>Damián Levy</strong><br>
+                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">23.5%</span>
+            </div>
+            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
+                <strong>Ricardo Bevacqua</strong><br>
+                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">23.5%</span>
+            </div>
+            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
+                <strong>Esteban Levy (PAS)</strong><br>
+                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">2%</span>
+            </div>
+        </div>
+
+    <!-- BLOQUE 7: DOBLE ESPEJO (único bloque) -->
+    <div class="section" id="b10">
         <div class="section-title">🔄 MECANISMO DOBLE ESPEJO <span class="concept-key">Activación Simultánea e Indivisible</span></div>
-        
+
+        <div style="margin-bottom:15px;font-size:0.9em;">
+            Se activa en <strong>MOMENTO 2 – SÍ MANIFIESTA</strong> y opera principalmente en los <strong>Escenarios Optimista e Intermedio</strong>.
+        </div>
+
         <div style="background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:25px;border-radius:15px;text-align:center;">
             <h3 style="margin-bottom:20px;">🔄 ACTIVACIÓN CON LA MANIFESTACIÓN DE VOLUNTAD</h3>
-            
+
             <div style="display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin:20px 0;">
                 <div style="background:rgba(255,255,255,0.2);padding:10px 15px;border-radius:10px;">Opción 51% SPAS</div>
                 <div style="font-size:1.5em;">+</div>
@@ -230,7 +493,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
                 <div style="font-size:1.5em;">+</div>
                 <div style="background:rgba(255,255,255,0.2);padding:10px 15px;border-radius:10px;">Opción 49% DC</div>
             </div>
-            
+
             <div style="background:rgba(255,255,255,0.1);padding:15px;border-radius:10px;">
                 <strong>Características:</strong><br>
                 • Idénticas reglas económicas, metodológicas y contractuales de DC<br>
@@ -240,197 +503,25 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
                 • Precio 51% = USD 1 (fijo e inamovible, independiente del patrimonio)
             </div>
         </div>
-        
+
         <button class="btn-ref" onclick="showClause('doble-espejo')" style="margin-top:15px;">Ver definición completa</button>
+        <span class="box-id">[10]</span>
     </div>
 
-    <!-- MOMENTOS DE DECISIÓN -->
+
+
+        <div class="alert alert-info" style="margin-top:20px;">
+            <strong>Gobierno:</strong> Se regirá reproduciendo de manera exacta y completa la estructura de gobierno de Decreditos S.A.<br>
+            <strong>CEO:</strong> Damián Levy | <strong>Directorio:</strong> Presidente PAS (GPAT), Vicepresidente DL
+        </div>
+
+        <button class="btn-ref" onclick="showClause('gobierno-corporativo')" style="margin-top:15px;">Ver cláusula completa</button>
+    </div>
+
+    <!-- LÍMITES DE COSTOS FIJOS INCREMENTALES -->
     <div class="section">
-        <div class="section-title">🎯 MOMENTOS DE DECISIÓN CRÍTICOS <span class="concept-key">3 Momentos Clave</span></div>
-        
-        <div class="decision-box">
-            <div class="decision-header">MOMENTO 1: ¿Condiciones Habilitantes cumplidas?</div>
-            <div class="options-grid">
-                <div class="option-yes">
-                    <strong>✅ SÍ - Ambas condiciones</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• Agente Institorio OK</li>
-                        <li>• BB/BACEN OK</li>
-                        <li>• Continúa a Momento 2</li>
-                    </ul>
-                </div>
-                <div class="option-no">
-                    <strong>❌ NO - Faltan condiciones</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• Espera máximo 2 años</li>
-                        <li>• Sin condiciones → Mecanismo Sustituto</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="decision-box">
-            <div class="decision-header">MOMENTO 2: ¿GPAT/BPAT manifiesta voluntad?</div>
-            <div class="options-grid">
-                <div class="option-yes">
-                    <strong>✅ SÍ MANIFIESTA</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• Compromiso IRREVOCABLE 100%</li>
-                        <li>• ACTIVA DOBLE ESPEJO</li>
-                        <li>• Efectos plenos inmediatos</li>
-                        <li>• Bloqueo dividendos</li>
-                    </ul>
-                </div>
-                <div class="option-no">
-                    <strong>❌ NO MANIFIESTA</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• Opción expira en 2 años</li>
-                        <li>• SPAS no adquirible por GPAT/BPAT</li>
-                        <li>• Activa Mecanismo Sustituto</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="decision-box">
-            <div class="decision-header">MOMENTO 3: ¿BCRA autoriza?</div>
-            <div class="options-grid">
-                <div class="option-yes">
-                    <strong>✅ AUTORIZA</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• GPAT compra 51% por USD 1 (precio fijo e inamovible)</li>
-                        <li>• Ejercicio opciones 49% SPAS + 49% DC</li>
-                        <li>• Integración completa</li>
-                    </ul>
-                </div>
-                <div class="option-no">
-                    <strong>❌ NO AUTORIZA</strong>
-                    <ul style="margin-top:10px;font-size:0.9em;">
-                        <li>• Compromiso subsiste sin alteración</li>
-                        <li>• Mecanismos alternativos</li>
-                        <li>• Doble Espejo vigente</li>
-                        <li>• Costos a cargo del comprador</li>
-                    </ul>
-                </div>
-            </div>
-        
+        <div class="section-title">📊 LÍMITES DE COSTOS FIJOS INCREMENTALES</div>
 
-        <table class="table-simple">
-            <thead>
-                <tr>
-                    <th>Escenario</th>
-                    <th>Manifestación de Voluntad</th>
-                    <th>Autorización BCRA / BB</th>
-                    <th>Situación de la SPAS</th>
-                    <th>Efecto Económico (resumen)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>A – CON Manifestación + CON BCRA</td>
-                    <td>Se emite dentro de los 2 años</td>
-                    <td>Autorización otorgada</td>
-                    <td>GPAT/BPAT adquieren el 51% de la SPAS y pueden adquirir el 49% restante</td>
-                    <td>Se aplica el esquema contractual directo de opciones (51% + 49%) sin Mecanismo Sustituto (Cl. 4 y 11)</td>
-                </tr>
-                <tr>
-                    <td>B – CON Manifestación + SIN BCRA</td>
-                    <td>Se emite dentro de los 2 años</td>
-                    <td>Autorización no otorgada</td>
-                    <td>No se perfecciona la adquisición del 51% por vía BCRA</td>
-                    <td>Se aplica el Mecanismo Económico Sustituto para computar el EBITDA SPAS elegible en DECREDITOS S.A. (Cl. 13)</td>
-                </tr>
-                <tr>
-                    <td>C – SIN Manifestación</td>
-                    <td>No se emite dentro de los 2 años</td>
-                    <td>No resulta relevante (no se ejerce la opción)</td>
-                    <td>SPAS no puede ser adquirida por GPAT/BPAT</td>
-                    <td>Se aplica el Mecanismo Económico Sustituto en los términos previstos (Cl. 12 y 13)</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-    </div>
-
-    <!-- NUEVA CAJA DESTACADA -->
-    <div class="highlighted-box">
-        <h3>⚠️ SIN MANIFESTACIÓN = PROCESO TERMINA</h3>
-        <p style="margin-top:10px;">
-            • No se avanza hacia ninguna adquisición<br>
-            • Solo queda el Mecanismo Económico Sustituto<br>
-            • SPAS no puede ser adquirida por GPAT/BPAT<br>
-            • Se ajusta la fórmula de determinación del precio del 49% de Decreditos incorporando el EBITDA SPAS elegible, según el Mecanismo Económico Sustituto
-        </p>
-    </div>
-
-    <!-- NUEVA SECCIÓN RUTAS DE ADQUISICIÓN -->
-    <div class="section">
-        <div class="section-title">🛤️ RUTAS DE ADQUISICIÓN <span class="concept-key">Escenarios Post-Manifestación</span></div>
-        
-        <div class="rutas-box">
-            <div class="rutas-header">PRE-REQUISITO: Manifestación de Voluntad emitida</div>
-            
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
-                <div style="background:#ebf8ff;padding:20px;border-radius:10px;border:2px solid #4299e1;">
-                    <h4 style="color:#2c5282;margin-bottom:10px;">RUTA A - CON AUTORIZACIÓN BCRA (Secuencial)</h4>
-                    <ol style="margin-top:10px;padding-left:20px;">
-                        <li>Compra 51% por USD 1 (precio fijo e inamovible)</li>
-                        <li>Compra 49% SPAS</li>
-                        <li>Simultáneo: 49% Decreditos</li>
-                    </ol>
-                </div>
-                
-                <div style="background:#fef5e7;padding:20px;border-radius:10px;border:2px solid #ed8936;">
-                    <h4 style="color:#744210;margin-bottom:10px;">RUTA B - SIN AUTORIZACIÓN BCRA (Simultánea)</h4>
-                    <ul style="margin-top:10px;padding-left:20px;">
-                        <li>Adquisición de la SPAS (hasta el 100%) mediante mecanismos alternativos</li>
-                        <li>Junto con 49% Decreditos</li>
-                        <li>El compromiso subsiste obligatoriamente según las opciones previstas en el contrato</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MECANISMOS ECONÓMICOS -->
-    <div class="section">
-        <div class="section-title">💰 MECANISMOS ECONÓMICOS SUSTITUTOS <span class="concept-key">Protección del Valor</span></div>
-        
-        <div class="mechanism-box">
-            <div class="mechanism-title">CASO A: Sin Manifestación de Voluntad</div>
-            <ul style="margin-top:10px;font-size:0.95em;">
-                <li>• <span title="EBITDA de la SPAS atribuible a negocios que habrían sido propios de DECREDITOS S.A.">EBITDA SPAS elegible</span> se suma al EBITDA de Decreditos como parte de este</li>
-                <li>• 51% EBITDA SPAS se descuenta del precio 49% DC</li>
-                <li>• Todo calculado en dólares con la misma metodología de Decreditos</li>
-            </ul>
-        </div>
-        
-        <div class="mechanism-box">
-            <div class="mechanism-title">CASO B: Con Manifestación pero sin BCRA</div>
-            <p style="margin-top:10px;font-size:0.95em;"><strong>Entre constitución SPAS y Manifestación:</strong> Aplican criterios Caso A</p>
-            <p style="font-size:0.95em;"><strong>Entre Manifestación y compra efectiva:</strong></p>
-            <ul style="font-size:0.95em;">
-                <li>• EBITDA SPAS en su totalidad se suma al EBITDA DC para precio</li>
-                <li>• 51% dividendos del período se descuentan del precio</li>
-                <li>• Todo calculado en dólares con la misma metodología de Decreditos</li>
-            </ul>
-        </div>
-        
-        <div class="alert alert-info">
-            <strong>Definición "negocios provenientes de DC":</strong> Conforme definición establecida en Cláusula 3
-            <button class="btn-ref" onclick="showClause('definiciones')">Ver definición completa</button>
-        </div>
-        
-        <button class="btn-ref" onclick="showClause('mecanismo-economico')" style="margin-top:15px;">Ver cláusula completa</button>
-    </div>
-
-    <!-- COSTOS Y GOBIERNO -->
-    <div class="section">
-        <div class="section-title">📊 COSTOS Y GOBIERNO CORPORATIVO <span class="concept-key">Límites y Estructura</span></div>
-        
-        <h3 style="margin-bottom:15px;">Límites de Costos Fijos Incrementales</h3>
-        
         <table class="table-simple">
             <thead>
                 <tr>
@@ -457,40 +548,14 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
                 </tr>
             </tbody>
         </table>
-        
-        <h3 style="margin:25px 0 15px;">Estructura Post-Adquisición</h3>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
-            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
-                <strong>GPAT/BPAT</strong><br>
-                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">51%</span>
-            </div>
-            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
-                <strong>Damián Levy</strong><br>
-                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">23.5%</span>
-            </div>
-            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
-                <strong>Ricardo Bevacqua</strong><br>
-                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">23.5%</span>
-            </div>
-            <div style="background:#f8f9fa;padding:10px;border-radius:8px;text-align:center;">
-                <strong>Esteban Levy (PAS)</strong><br>
-                <span style="background:#667eea;color:white;padding:2px 8px;border-radius:10px;font-size:0.85em;">2%</span>
-            </div>
-        </div>
-        
-        <div class="alert alert-info" style="margin-top:20px;">
-            <strong>Gobierno:</strong> Se regirá reproduciendo de manera exacta y completa la estructura de gobierno de Decreditos S.A.<br>
-            <strong>CEO:</strong> Damián Levy | <strong>Directorio:</strong> Presidente PAS (GPAT), Vicepresidente DL
-        </div>
-        
-        <button class="btn-ref" onclick="showClause('gobierno-corporativo')" style="margin-top:15px;">Ver cláusula completa</button>
+
+        <button class="btn-ref" onclick="showClause('cl14')" style="margin-top:15px;">Ver cláusula completa</button>
     </div>
 
     <!-- PUNTOS CRÍTICOS -->
     <div class="critical-points">
         <h3>⚠️ PUNTOS CRÍTICOS FUNDAMENTALES</h3>
-        
+
         <ul class="critical-list">
             <li>SPAS no adquirible por GPAT/BPAT si vence plazo sin manifestación <button class="btn-ref" onclick="showClause('cl12')">Ver Cláusula</button></li>
             <li>Manifestación produce efectos plenos inmediatos, independiente del resultado BCRA <button class="btn-ref" onclick="showClause('etapa5')">Ver Cláusula</button></li>
@@ -506,7 +571,6 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
             <li>Imposibilidad de instrumentar no afecta vigencia del compromiso <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
         </ul>
     </div>
-
 
     <!-- FAQ SECCIÓN PREGUNTAS FRECUENTES -->
     <div class="section">
@@ -531,10 +595,11 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
             <p>En todos los escenarios, el EBITDA SPAS elegible se incorpora al EBITDA de DECREDITOS S.A. para la determinación del precio del 49%, y se descuentan los porcentajes acordados (incluyendo el 51%) de forma que la lógica económica y las metodologías originales se mantengan inalteradas, cualquiera sea la ruta regulatoria utilizada.</p>
         </div>
     </div>
+
     <!-- REFERENCIAS -->
     <div class="section">
         <div class="section-title">📚 REFERENCIAS COMPLETAS DEL ACUERDO</div>
-        
+
         <div style="display:grid;gap:10px;margin-top:20px;">
             <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:#f8f9fa;border-radius:8px;">
                 <span><strong>Cláusula 1:</strong> Partes del Acuerdo</span>
@@ -1010,6 +1075,13 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 window.addEventListener('click', function(e) {
     if (e.target.id === 'modal') closeModal();
 });
+
+
+function scrollToBox(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
 
 </script>
 </body>
