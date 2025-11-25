@@ -209,8 +209,8 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="step-number">5</div>
 <div class="step-content">
 <div class="step-title">Autorización BB/BACEN <button class="btn-ref" onclick="showClause('etapa4')">Ver Cláusula</button></div>
-<div class="step-desc">Banco Patagonia solicita autorización</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">Condición habilitante #2</div>
+<div class="step-desc">BB: Requisito obligatorio para Manifestar | BACEN: Solo condicionante temporal</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Sin BB no hay Manifestación. Sin BACEN se usan mecanismos alternativos al ejecutar put/call</div>
 </div>
 </div>
 <div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
@@ -226,15 +226,15 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="timeline-step">
 <div class="step-number">7</div>
 <div class="step-content">
-<div class="step-title">Solicitud BCRA <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></div>
-<div class="step-desc">SI autoriza: Compra 51% USD 1 (precio fijo e inamovible, independiente del patrimonio) | NO autoriza: Mecanismos alternativos</div>
+<div class="step-title">Autorización Reguladores BCRA + BACEN <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></div>
+<div class="step-desc">SI autorizan AMBOS: Compra 51% USD 1 (precio fijo e inamovible) | Si alguno NO autoriza: Mecanismos alternativos</div>
 <div style="color:#667eea;font-size:0.85em;margin-top:5px;">Compromiso subsiste en todos los casos</div>
 </div>
 </div>
 </div>
 <div class="critical-deadline">
             ⏰ <strong>Plazo crítico: 2 años impretermitibles desde la firma.</strong><br/>
-            Si no hay Manifestación de Voluntad dentro de ese plazo, la SPAS no podrá ser adquirida por GPAT/BPAT y se activa exclusivamente el Mecanismo Económico Sustituto, según Cláusulas 12 y 13 de la Carta de Entendimiento.
+            Si GPAT/BPAT no cumplen las Condiciones Habilitantes para Manifestar dentro de este plazo, o si cumpliéndolas no emiten la Manifestación de Voluntad, la SPAS no podrá ser adquirida por GPAT/BPAT y se activa exclusivamente el Mecanismo Económico Sustituto, según Cláusulas 12 y 13 de la Carta de Entendimiento.
         </div>
 </div>
 <!-- MOMENTOS DE DECISIÓN -->
@@ -242,21 +242,24 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="section-title">🎯 MOMENTOS DE DECISIÓN CRÍTICOS <span class="concept-key">3 Momentos Clave</span></div>
 <!-- BLOQUE 1: Momento 1 - cuadro verde/rojo -->
 <div class="decision-box" id="b1">
-<div class="decision-header">MOMENTO 1: INSCRIPCIÓN SPAS Y AUTORIZACIÓN BRASIL</div>
+<div class="decision-header">MOMENTO 1: CONDICIONES HABILITANTES PARA MANIFESTAR VOLUNTAD</div>
 <div class="options-grid">
 <div class="option-yes">
 <strong style="font-size:1.05em;">✅ SÍ - CUMPLE CONDICIONES:</strong>
 <ul style="margin-top:10px;font-size:0.9em;">
 <li>• Agente Institorio OK</li>
-<li>• BB/BACEN OK</li>
+<li>• Autorización Directorio GPAT</li>
+<li>• Autorización Directorio BPAT</li>
+<li>• Autorización Directorio Banco do Brasil</li>
 <li>• CONTINÚA MOMENTO 2</li>
 </ul>
 <span class="box-id">[1]</span>
 </div>
 <div class="option-no" id="b2">
-<strong style="font-size:1.05em;">❌ NO - FALTAN CONDICIONES</strong>
+<strong style="font-size:1.05em;">❌ NO - FALTAN CONDICIONES PARA MANIFESTAR</strong>
 <ul style="margin-top:10px;font-size:0.9em;">
 <li>Espera máximo 2 años</li>
+<li>No puede emitirse la Manifestación dentro del Plazo Crítico</li>
 <li><strong>SPAS NO ADQUIRIBLE por GPAT/BPAT</strong></li>
 <li><strong>ACTIVA MECANISMO SUSTITUTO</strong></li>
 </ul>
@@ -275,6 +278,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <li>Compromiso IRREVOCABLE 100%</li>
 <li><span style="font-weight:bold;font-size:1.05em;">ACTIVA DOBLE ESPEJO</span></li>
 <li>Efectos plenos inmediatos</li>
+<li>Independiente de autorizaciones BACEN/BCRA</li>
 <li>Bloqueo dividendos</li>
 </ul>
 <span class="box-id">[3]</span>
@@ -293,10 +297,10 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 </div>
 <!-- BLOQUE 3: Momento 3 - cuadros verde/rojo -->
 <div class="decision-box">
-<div class="decision-header">MOMENTO 3: APROBACIÓN BCRA</div>
+<div class="decision-header">MOMENTO 3: APROBACIÓN BCRA Y BACEN</div>
 <div class="options-grid">
 <div class="option-yes" id="b5">
-<strong style="font-size:1.05em;">✅ AUTORIZA</strong>
+<strong style="font-size:1.05em;">✅ AUTORIZAN AMBOS (BCRA Y BACEN)</strong>
 <ul style="margin-top:10px;font-size:0.9em;">
 <li>GPAT compra 51% por USD 1 (precio fijo e inamovible)</li>
 <li>Ejercicio opciones 49% SPAS + 49% DC</li>
@@ -305,7 +309,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <span class="box-id">[5]</span>
 </div>
 <div class="option-no" id="b6">
-<strong style="font-size:1.05em;">❌ NO AUTORIZA</strong>
+<strong style="font-size:1.05em;">❌ NO AUTORIZA ALGUNO (BCRA o BACEN)</strong>
 <ul style="margin-top:10px;font-size:0.9em;">
 <li>Compromiso subsiste sin alteración</li>
 <li><span style="font-weight:bold;font-size:1.05em;">MECANISMOS ALTERNATIVOS</span></li>
@@ -324,7 +328,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <strong>OPTIMISTA</strong><span style="font-weight:normal;font-size:0.85em;"> (70%)</span>
 <ul style="margin-top:8px;font-size:0.85em;">
 <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
-<li>Momento 3 = BCRA Autoriza: SÍ</li>
+<li>Momento 3 = BCRA y BACEN Autorizan: SÍ</li>
 <li>Resultado inicial: adquisición 51%</li>
 <li>Resultado final: adquisición completa + 49%</li>
 </ul>
@@ -333,7 +337,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <strong>INTERMEDIO</strong><span style="font-weight:normal;font-size:0.85em;"> (25%)</span>
 <ul style="margin-top:8px;font-size:0.85em;">
 <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
-<li>Momento 3 = BCRA Autoriza: NO</li>
+<li>Momento 3 = BCRA o BACEN No Autorizan</li>
 <li>Resultado: se aplica Mecanismo Económico Sustituto</li>
 </ul>
 </div>
@@ -373,7 +377,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div style="background:#f0fff4;font-size:1.1em;padding:20px;border-radius:10px;border:4px solid #38a169;">
 <h4 style="color:#22543d;margin-bottom:10px;">
 <span style="font-size:1.15em;">RUTA OPTIMA</span>
-<span style="font-weight:normal;"> – CON AUTORIZACIÓN BCRA</span>
+<span style="font-weight:normal;"> – CON AUTORIZACIÓN BCRA + BACEN</span>
 <span style="font-weight:normal;font-size:0.9em;"> (Secuencial)</span>
 </h4>
 <ol style="margin-top:10px;padding-left:20px;">
@@ -385,7 +389,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div style="background:#ffffff;font-size:1.1em;padding:20px;border-radius:10px;border:2px solid #9ae6b4;">
 <h4 style="color:#744210;margin-bottom:10px;">
 <span style="font-size:1.15em;">RUTA INTERMEDIA</span>
-<span style="font-weight:normal;"> – SIN AUTORIZACIÓN BCRA</span>
+<span style="font-weight:normal;"> – SIN AUTORIZACIÓN BCRA o BACEN</span>
 <span style="font-weight:normal;font-size:0.9em;"> (Simultánea al final del proceso - +4 años)</span>
 </h4>
 <ul style="margin-top:10px;padding-left:20px;">
@@ -512,6 +516,9 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <div class="critical-points">
 <h3>⚠️ PUNTOS CRÍTICOS FUNDAMENTALES</h3>
 <ul class="critical-list">
+<li>Autorizaciones directorios GPAT/BPAT/BB son condición absoluta para poder Manifestar <button class="btn-ref" onclick="showClause('cl3')">Ver Cláusula</button></li>
+<li>BACEN NO condiciona la Manifestación, solo es condicionante temporal para compra parcial <button class="btn-ref" onclick="showClause('cl3')">Ver Cláusula</button></li>
+<li>Negativa de BCRA o BACEN activa idénticos mecanismos alternativos <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
 <li>SPAS no adquirible por GPAT/BPAT si vence plazo sin manifestación <button class="btn-ref" onclick="showClause('cl12')">Ver Cláusula</button></li>
 <li>Manifestación produce efectos plenos inmediatos, independiente del resultado BCRA <button class="btn-ref" onclick="showClause('etapa5')">Ver Cláusula</button></li>
 <li>Plazo 2 años IMPRORROGABLE salvo prórroga simultánea con Manifestación <button class="btn-ref" onclick="showClause('cl12')">Ver Cláusula</button></li>
@@ -520,7 +527,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <li>Costos estructuras alternativas asumidos exclusivamente por comprador <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
 <li>Contratos DC se replican de manera literal para SPAS <button class="btn-ref" onclick="showClause('cl17')">Ver Cláusula</button></li>
 <li>Precio 51% = USD 1 (fijo e inamovible, independiente del patrimonio) <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
-<li>Compromiso subsiste ante no autorización BCRA <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
+<li>Compromiso subsiste ante no autorización de BCRA o BACEN <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
 <li>Doble Espejo mantiene plena vigencia en mecanismos alternativos <button class="btn-ref" onclick="showClause('doble-espejo')">Ver Cláusula</button></li>
 <li>Equivalencia económica obligatoria en todos los escenarios <button class="btn-ref" onclick="showClause('cl13')">Ver Cláusula</button></li>
 <li>Imposibilidad de instrumentar no afecta vigencia del compromiso <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></li>
@@ -533,19 +540,24 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 <strong>Propósito:</strong> Reforzar los mensajes clave que suelen surgir en el Comité y alinear la interpretación económica y regulatoria.
         </div>
 <div class="mechanism-box">
-<div class="mechanism-title">1. ¿Por qué el 51% de la SPAS se compra por USD 1?</div>
-<p>Porque el valor económico de la transacción no está en el 51% simbólico de la SPAS, sino en la opción de compra/venta del 49% de la SPAS y del 49% de DECREDITOS S.A., que se determinan utilizando la misma metodología de EBITDA y precio establecida en los acuerdos vigentes relacionados con Decreditos S.A.</p>
+<div class="mechanism-title">1. ¿Qué pasa si BACEN no autoriza pero BCRA sí?</div>
+<p>Se activan los mismos mecanismos alternativos que si BCRA no autorizara. El compromiso de adquisición permanece irrevocable y la Manifestación mantiene plena vigencia. La adquisición del 100% se completará mediante mecanismos alternativos cuando se ejecute el put/call conjunto.</p>
 </div>
 <div class="mechanism-box">
-<div class="mechanism-title">2. ¿Qué pasa si el BCRA no autoriza?</div>
+<div class="mechanism-title">2. ¿Por qué el 51% de la SPAS se compra por USD 1?</div>
+<p>Porque el valor económico de la transacción no está en el 51% inicial, sino en la opción de compra/venta del 49% restante de la SPAS y en la opción espejo del 49% de Decreditos S.A., que utilizan la misma metodología de EBITDA pactada contractualmente.</p>
+</div>
+
+<div class="mechanism-box">
+<div class="mechanism-title">3. ¿Qué pasa si el BCRA o el BACEN no autorizan?</div>
 <p>El compromiso de adquisición permanece plenamente vigente. La adquisición se implementa a través de Mecanismos Alternativos de Adquisición y se activa el Mecanismo Económico Sustituto que preserva la equivalencia económica acordada, sin pérdida de valor para ninguna de las Partes.</p>
 </div>
 <div class="mechanism-box">
-<div class="mechanism-title">3. ¿Puede alguien más comprar la SPAS?</div>
+<div class="mechanism-title">4. ¿Puede alguien más comprar la SPAS?</div>
 <p>Sí, pero solo en el escenario en el que no exista Manifestación de Voluntad dentro del Plazo Crítico de Dos Años. En ese caso, la SPAS no podrá ser adquirida por GPAT/BPAT y solamente quedará vigente el Mecanismo Económico Sustituto sobre el EBITDA SPAS elegible.</p>
 </div>
 <div class="mechanism-box">
-<div class="mechanism-title">4. ¿Cómo se garantiza la protección del EBITDA de Decreditos?</div>
+<div class="mechanism-title">5. ¿Cómo se garantiza la protección del EBITDA de Decreditos?</div>
 <p>En todos los escenarios, el EBITDA SPAS elegible se incorpora al EBITDA de DECREDITOS S.A. para la determinación del precio del 49%, y se descuentan los porcentajes acordados (incluyendo el 51%) de forma que la lógica económica y las metodologías originales se mantengan inalteradas, cualquiera sea la ruta regulatoria utilizada.</p>
 </div>
 </div>
@@ -658,13 +670,22 @@ contenido: `<h3>CLÁUSULA 3. DEFINICIONES</h3>
 
 <p><strong>c. Agente Institorio:</strong> habilitación SSN que permite actuar bajo el régimen del BCRA para su adquisición por entidades financieras.</p>
 
-<p><strong>d. Condiciones Habilitantes:</strong></p>
+<p><strong>d. Condiciones Habilitantes para Manifestar Voluntad y Compromiso de Compra por parte de GPAT/BPAT:</strong></p>
 <div style="margin-left:30px;">
-<p>i. Habilitación de la SPAS como Agente Institorio.</p>
-<p>ii. Autorizaciones de Banco do Brasil ("BB") y BACEN.</p>
+<p>i. Autorización directorio GPAT</p>
+<p>ii. Autorización directorio BPAT</p>
+<p>iii. Autorización directorio Banco do Brasil</p>
+<p>iv. Habilitación de la SPAS como Agente Institorio</p>
 </div>
 
-<p><strong>e. Manifestación de Voluntad y Compromiso:</strong> declaración firme e irrevocable por la cual GPAT/BPAT manifiestan su decisión de avanzar con la adquisición del negocio de seguros.</p>
+<p><strong>e. Condiciones Habilitantes para efectivizar el ejercicio de compra del 51% de la nueva SPAS:</strong></p>
+<div style="margin-left:30px;">
+<p>i. Manifestación de Voluntad y Compromiso (condicionante absoluto)</p>
+<p>ii. Autorización del regulador BACEN (condicionante temporal)</p>
+<p>iii. Autorización del regulador BCRA (condicionante temporal)</p>
+</div>
+
+<p><strong>f. Condicionantes temporales:</strong> son aquellas autorizaciones regulatorias necesarias para que GPAT/BPAT pueda adquirir parcialmente el paquete accionario de la nueva SPAS. Son temporales dado que en caso de no conseguirse, GPAT/BPAT podrá adquirir el 100% de la nueva SPAS, al momento de ejecutarse el put/call vigente por el 49% restante de Decreditos. En este caso se utilizarán los Mecanismos Alternativos de Adquisición.</p>
 
 <p><strong>f. EBITDA Histórico de DECREDITOS S.A.:</strong> EBITDA determinado según metodología vigente en los contratos de DECREDITOS S.A.</p>
 
@@ -769,7 +790,15 @@ contenido: `<h3>CLÁUSULA 8. ETAPA 4 - HABILITACIÓN COMO AGENTE INSTITORIO</h3>
 'etapa4': {
 titulo: 'CLÁUSULA 9. ETAPA 5 - AUTORIZACIONES BB/BACEN',
 contenido: `<h3>CLÁUSULA 9. ETAPA 5 - AUTORIZACIONES BB/BACEN</h3>
-<p>BPAT/GPAT gestionarán las autorizaciones para proceder con la estrategia objeto de la presente.</p>`
+<p><strong>a.</strong> BPAT/GPAT gestionará las autorizaciones ante Banco do Brasil (BB):</p>
+<div style="margin-left:30px;">
+<p>i. requisito condicionante para confirmar la Manifestación de Voluntad de Compra</p>
+</div>
+<p><strong>b.</strong> BPAT/GPAT gestionará las autorizaciones ante BACEN:</p>
+<div style="margin-left:30px;">
+<p>i. NO es requisito condicionante para confirmar la Manifestación de Voluntad de Compra</p>
+<p>ii. Condicionante temporal para efectivizar la compra: no podría adquirirse el 51% de manera parcial, teniendo que utilizar mecanismos alternativos de adquisición en el futuro</p>
+</div>`
 },
 
 'etapa5': {
@@ -788,13 +817,13 @@ contenido: `<h3>CLÁUSULA 10. ETAPA 6 - MANIFESTACIÓN DE VOLUNTAD Y COMPROMISO<
 titulo: 'CLÁUSULA 11. ETAPA 7 - RESOLUCIÓN DEL TRÁMITE ANTE EL BCRA',
 contenido: `<h3>CLÁUSULA 11. ETAPA 7 - RESOLUCIÓN DEL TRÁMITE ANTE EL BCRA</h3>
 
-<p><strong>a. SI EL BCRA AUTORIZA</strong></p>
+<p><strong>a. SI EL BCRA Y EL BACEN AUTORIZAN</strong></p>
 <div style="margin-left:30px;">
 <p>i. GPAT/BPAT adquieren el 51% por USD 1.</p>
 <p>ii. Se ejecutan simultáneamente la opción del 49% SPAS y la del 49% DECREDITOS S.A.</p>
 </div>
 
-<p><strong>b. SI EL BCRA NO AUTORIZA</strong></p>
+<p><strong>b. SI EL BCRA O EL BACEN NO AUTORIZAN</strong></p>
 <div style="margin-left:30px;">
 <p>i. El compromiso firme subsiste sin alteración.</p>
 <p>ii. La adquisición se implementará mediante Mecanismos Alternativos de Adquisición o estructuras superadoras.</p>
