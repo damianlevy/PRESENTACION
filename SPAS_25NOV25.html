@@ -12,7 +12,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 .header {background:linear-gradient(135deg,#1e3c72,#2a5298);color:white;padding:40px;border-radius:15px;text-align:center;margin-bottom:30px;}
 .header h1 {font-size:2.5em;margin-bottom:15px;}
 .version-badge {display:inline-block;background:rgba(255,255,255,0.2);padding:8px 20px;border-radius:20px;margin-top:10px;}
-.section {background:white;border-radius:15px;padding:30px;margin-bottom:25px;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
+.section {background:white;border-radius:15px;padding:30px;margin-bottom:11vh;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
 .section-title {background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;}
 .btn-ref {background:#667eea;color:white;border:none;padding:5px 12px;border-radius:15px;cursor:pointer;font-size:0.85em;margin-left:10px;transition:all 0.3s;}
 .btn-ref:hover {background:#5a67d8;transform:translateY(-1px);}
@@ -23,7 +23,8 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 .timeline {position:relative;padding-left:50px;margin:30px 0;}
 .timeline::before {content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:#667eea;}
 .timeline-step {position:relative;margin-bottom:25px;}
-.step-number {position:absolute;left:-40px;width:40px;height:40px;background:white;border:2px solid #667eea;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#667eea;}
+.step-number {position:absolute;left:-40px;width:40px;height:40px;background:white;border:2px solid #667eea;border-radius:50%;display:flex;align-items:center;justify-content:flex-start;
+    font-weight:bold;color:#667eea;}
 .step-content {background:#f8f9fa;padding:15px;border-radius:10px;}
 .step-title {font-weight:bold;margin-bottom:5px;}
 .step-desc {font-size:0.9em;color:#666;}
@@ -119,11 +120,48 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 </style>
 </head>
 <body>
+<div id="access-screen" style="position:fixed; top:0; left:0; width:100%; height:100%;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
+    z-index:9999; padding:20px;">
+
+    <h1 style="color:white; margin-top:0; position:relative; top:-7vh; font-size:3.4em; text-align:center;
+        margin-bottom:25px; font-weight:700;
+        text-shadow:0 2px 6px rgba(0,0,0,0.3);">
+        ESTRATEGIA SECUENCIAL SPAS
+    </h1>
+
+    <div style="background:white; padding:30px 35px; border-radius:15px;
+        width:90%; max-width:420px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.25); text-align:center;
+        margin-top:-20px;">
+
+        <p style="font-size:1.1em; margin-bottom:15px;">
+            Ingresá tu e mail o nombre completo para acceder
+        </p>
+
+        <input id="userInput" type="text"
+            placeholder="e mail o nombre completo"
+            style="width:100%; padding:14px; font-size:1.1em;
+            border-radius:10px; border:none; outline:none;
+            margin-bottom:20px; background:#f1f5f9;">
+
+        <button onclick="acceder()"
+            style="width:100%; padding:14px; background:#38a169;
+            color:white; font-size:1.2em; border:none; border-radius:10px;
+            cursor:pointer; font-weight:600;
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            INGRESAR
+        </button>
+    </div>
+</div>
+
 <div class="container">
 <!-- HEADER PRINCIPAL -->
 <div class="header" style="text-align:left; position:relative;">
 <h1 style="text-align:center; margin-bottom:40px;">
-🎯 ESTRATEGIA SPAS - DECREDITOS S.A.
+ESTRATEGIA SECUENCIAL SPAS
 </h1>
 
 <!-- Botón a la izquierda -->
@@ -266,7 +304,7 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 
 
 <!-- ESCENARIOS POSIBLES - SECCIÓN DESTACADA -->
-<div class="section" id="seccion-escenarios">
+<div class="section" id="b7">
 <div class="section-title" style="background:linear-gradient(135deg,#1a365d,#2c5282);font-size:2em;">🎯 ESCENARIOS POSIBLES</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:15px;">
 <div style="background:#f0fff4;border-radius:10px;border:4px solid #38a169;padding:16px;">
@@ -1093,6 +1131,44 @@ function scrollToBox(id) {
     if (!el) return;
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
+
+
+function acceder() {
+    const input = document.getElementById('userInput');
+    const valor = (input && input.value ? input.value : '').trim();
+
+    if (!valor) {
+        alert('Por favor ingresá tu e mail o nombre completo para continuar.');
+        return;
+    }
+
+    try {
+        localStorage.setItem('spas_usuario', valor);
+    } catch (e) {
+        // ignorar errores de storage
+    }
+
+    const screen = document.getElementById('access-screen');
+    if (screen) {
+        screen.style.display = 'none';
+    }
+}
+
+window.addEventListener('load', function() {
+    let saved = null;
+    try {
+        saved = localStorage.getItem('spas_usuario');
+    } catch (e) {
+        saved = null;
+    }
+
+    if (saved) {
+        const screen = document.getElementById('access-screen');
+        if (screen) {
+            screen.style.display = 'none';
+        }
+    }
+});
 
 </script>
 </body>
