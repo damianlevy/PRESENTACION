@@ -1174,12 +1174,6 @@ function acceder() {
         return;
     }
 
-    try {
-        localStorage.setItem('spas_usuario', valor);
-    } catch (e) {
-        // ignorar errores de almacenamiento
-    }
-
     const screen = document.getElementById('access-screen');
     if (screen) {
         screen.style.display = 'none';
@@ -1187,7 +1181,7 @@ function acceder() {
 
     // Enviar registro de acceso a Google Apps Script (URL a definir)
     try {
-        fetch("URL_DEL_WEBHOOK_A_DEFINIR", {
+        fetch("https://script.google.com/macros/s/AKfycbzcLl6glDr9n6EH1mgkwCHvo1Lc5gISNMaFX0LkFptU1K-GOg0Lm08aawauvnHiCIz8Rw/exec", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -1201,21 +1195,7 @@ function acceder() {
     }
 }
 
-window.addEventListener('load', function() {
-    let saved = null;
-    try {
-        saved = localStorage.getItem('spas_usuario');
-    } catch (e) {
-        saved = null;
-    }
 
-    if (saved) {
-        const screen = document.getElementById('access-screen');
-        if (screen) {
-            screen.style.display = 'none';
-        }
-    }
-});
 
 </script>
 </body>
