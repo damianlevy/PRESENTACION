@@ -119,37 +119,70 @@ body {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;b
 </style>
 </head>
 <body>
-<div id="access-screen" style="position:fixed; top:0; left:0; width:100%; height:100%;
+<div id="access-screen" style="
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     background:linear-gradient(135deg,#1e3c72,#2a5298);
-    display:flex; flex-direction:column;
-    justify-content:center; align-items:center;
-    z-index:9999; padding:20px;">
-
-    <h1 style="color:white; font-size:2.8em; text-align:center;
-        margin-bottom:40px; font-weight:700;
-        text-shadow:0 2px 6px rgba(0,0,0,0.3);">
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+">
+    <h1 style="
+        color:white;
+        font-size:3.2em;
+        text-align:center;
+        margin-bottom:30px;
+        font-weight:700;
+        text-shadow:0 2px 6px rgba(0,0,0,0.3);
+    ">
         ESTRATEGIA SECUENCIAL SPAS
     </h1>
 
-    <div style="background:white; padding:30px 35px; border-radius:15px;
-        width:90%; max-width:420px;
-        box-shadow:0 10px 30px rgba(0,0,0,0.25); text-align:center;">
-
-        <p style="font-size:1.1em; margin-bottom:15px;">
+    <div style="
+        background:white;
+        padding:28px 32px;
+        border-radius:15px;
+        width:90%;
+        max-width:420px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.25);
+        text-align:center;
+    ">
+        <p style="font-size:1.05em; margin-bottom:15px;">
             Ingresá tu e mail o nombre completo para acceder
         </p>
 
         <input id="userInput" type="text"
             placeholder="e mail o nombre completo"
-            style="width:100%; padding:14px; font-size:1.1em;
-            border-radius:10px; border:none; outline:none;
-            margin-bottom:20px; background:#f1f5f9;">
+            style="
+                width:100%;
+                padding:14px;
+                font-size:1.05em;
+                border-radius:10px;
+                border:none;
+                outline:none;
+                margin-bottom:18px;
+                background:#f1f5f9;
+            " />
 
         <button onclick="acceder()"
-            style="width:100%; padding:14px; background:#38a169;
-            color:white; font-size:1.2em; border:none; border-radius:10px;
-            cursor:pointer; font-weight:600;
-            box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            style="
+                width:100%;
+                padding:14px;
+                background:#38a169;
+                color:white;
+                font-size:1.1em;
+                border:none;
+                border-radius:10px;
+                cursor:pointer;
+                font-weight:600;
+                box-shadow:0 4px 12px rgba(0,0,0,0.2);
+            ">
             INGRESAR
         </button>
     </div>
@@ -216,6 +249,77 @@ ESTRATEGIA SECUENCIAL SPAS
 
 
 
+<!-- SECUENCIA DE IMPLEMENTACIÓN -->
+<div class="section">
+<div class="section-title">📋 SECUENCIA DE IMPLEMENTACIÓN <span class="concept-key">7 Etapas</span></div>
+<div class="timeline">
+<div class="timeline-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<div class="step-title">Acuerdo Marco y Contratos <button class="btn-ref" onclick="showClause('etapa0')">Ver Cláusula</button></div>
+<div class="step-desc">Firma de Carta + Contratos derivados (90 días objetivo)</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Plazos no condicionan vigencia del acuerdo</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<div class="step-title">Constitución SPAS <button class="btn-ref" onclick="showClause('etapa1')">Ver Cláusula</button></div>
+<div class="step-desc">IGJ con estructura Ley 22.400</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">4 alternativas posibles según contrato</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<div class="step-title">Inscripción SSN <button class="btn-ref" onclick="showClause('etapa2')">Ver Cláusula</button></div>
+<div class="step-desc">Aprobación como Sociedad de Productores Asesores de Seguros</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<div class="step-title">Habilitación Agente Institorio <button class="btn-ref" onclick="showClause('etapa3')">Ver Cláusula</button></div>
+<div class="step-desc">Operación de la SPAS como Agente Institorio</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">Condición habilitante #1</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">5</div>
+<div class="step-content">
+<div class="step-title">Autorización BB/BACEN <button class="btn-ref" onclick="showClause('etapa4')">Ver Cláusula</button></div>
+<div class="step-desc">BB: Requisito obligatorio para Manifestar | BACEN: Solo condicionante temporal</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Sin BB no hay Manifestación. Sin BACEN se usan mecanismos alternativos al ejecutar put/call</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">6</div>
+<div class="step-content">
+<div class="step-title">Manifestación de Voluntad <button class="btn-ref" onclick="showClause('etapa5')">Ver Cláusula</button></div>
+<div class="step-desc">GPAT/BPAT compromiso firme e irrevocable del 100%</div>
+<div style="color:#e53e3e;font-size:0.85em;margin-top:5px;font-weight:bold;">🔴 ACTIVA DOBLE ESPEJO - Efectos plenos inmediatos</div>
+</div>
+</div>
+<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
+<div class="timeline-step">
+<div class="step-number">7</div>
+<div class="step-content">
+<div class="step-title">Autorización Reguladores BCRA + BACEN <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></div>
+<div class="step-desc">SI autorizan AMBOS: Compra 51% USD 1 (precio fijo e inamovible) | Si alguno NO autoriza: Mecanismos alternativos</div>
+<div style="color:#667eea;font-size:0.85em;margin-top:5px;">Compromiso subsiste en todos los casos</div>
+</div>
+</div>
+</div>
+<div class="critical-deadline">
+            ⏰ <strong>Plazo crítico: 2 años impretermitibles desde la firma.</strong><br/>
+            Si GPAT/BPAT no cumplen las Condiciones Habilitantes para Manifestar dentro de este plazo, o si cumpliéndolas no emiten la Manifestación de Voluntad, la SPAS no podrá ser adquirida por GPAT/BPAT y se activa exclusivamente el Mecanismo Económico Sustituto, según Cláusulas 12 y 13 de la Carta de Entendimiento.
+        </div>
+</div>
 <!-- MOMENTOS DE DECISIÓN -->
 <div class="section">
 <div class="section-title">🎯 MOMENTOS DE DECISIÓN CRÍTICOS <span class="concept-key">3 Momentos Clave</span></div>
@@ -305,7 +409,7 @@ ESTRATEGIA SECUENCIAL SPAS
 <div class="section" id="b7">
 <div class="section-title" style="background:linear-gradient(135deg,#1a365d,#2c5282);font-size:2em;">🎯 ESCENARIOS POSIBLES</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:15px;">
-<div style="background:#f0fff4;border-radius:10px;border:4px solid #38a169;padding:16px;">
+<div style="background:#f0fff4;border-radius:14px;border:4px solid #38a169;padding:24px;box-shadow:0 6px 18px rgba(0,0,0,0.12);">
 <strong style="color:#22543d;font-size:1.1em;">OPTIMISTA</strong><span style="font-weight:normal;font-size:0.85em;"> (70%)</span>
 <ul style="margin-top:8px;font-size:0.85em;">
 <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
@@ -314,7 +418,7 @@ ESTRATEGIA SECUENCIAL SPAS
 <li>Resultado final: adquisición completa + 49%</li>
 </ul>
 </div>
-<div style="background:#ffffff;border-radius:10px;border:2px solid #9ae6b4;padding:16px;">
+<div style="background:#ffffff;border-radius:14px;border:2px solid #9ae6b4;padding:24px;box-shadow:0 6px 18px rgba(0,0,0,0.10);">
 <strong style="color:#744210;font-size:1.1em;">INTERMEDIO</strong><span style="font-weight:normal;font-size:0.85em;"> (25%)</span>
 <ul style="margin-top:8px;font-size:0.85em;">
 <li>Momento 2 = GPAT/BPAT Manifiesta: SÍ</li>
@@ -322,7 +426,7 @@ ESTRATEGIA SECUENCIAL SPAS
 <li>Resultado: se aplica Mecanismo Económico Sustituto</li>
 </ul>
 </div>
-<div style="background:#ffffff;border-radius:10px;border:3px solid #e53e3e;padding:16px;color:#742a2a;">
+<div style="background:#ffffff;border-radius:14px;border:3px solid #e53e3e;padding:24px;color:#742a2a;box-shadow:0 6px 18px rgba(0,0,0,0.12);">
 <strong style="color:#e53e3e;font-size:1.1em;">PESIMISTA</strong><span style="font-weight:normal;font-size:0.85em;"> (5%)</span>
 <ul style="margin-top:8px;font-size:0.85em;">
 <li>Momento 2 = GPAT/BPAT Manifiesta: NO</li>
@@ -334,77 +438,6 @@ ESTRATEGIA SECUENCIAL SPAS
 <span class="box-id">[7]</span>
 </div>
 
-<!-- SECUENCIA DE IMPLEMENTACIÓN -->
-<div class="section">
-<div class="section-title">📋 SECUENCIA DE IMPLEMENTACIÓN <span class="concept-key">7 Etapas</span></div>
-<div class="timeline">
-<div class="timeline-step">
-<div class="step-number">1</div>
-<div class="step-content">
-<div class="step-title">Acuerdo Marco y Contratos <button class="btn-ref" onclick="showClause('etapa0')">Ver Cláusula</button></div>
-<div class="step-desc">Firma de Carta + Contratos derivados (90 días objetivo)</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Plazos no condicionan vigencia del acuerdo</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">2</div>
-<div class="step-content">
-<div class="step-title">Constitución SPAS <button class="btn-ref" onclick="showClause('etapa1')">Ver Cláusula</button></div>
-<div class="step-desc">IGJ con estructura Ley 22.400</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">4 alternativas posibles según contrato</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">3</div>
-<div class="step-content">
-<div class="step-title">Inscripción SSN <button class="btn-ref" onclick="showClause('etapa2')">Ver Cláusula</button></div>
-<div class="step-desc">Aprobación como Sociedad de Productores Asesores de Seguros</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">4</div>
-<div class="step-content">
-<div class="step-title">Habilitación Agente Institorio <button class="btn-ref" onclick="showClause('etapa3')">Ver Cláusula</button></div>
-<div class="step-desc">Operación de la SPAS como Agente Institorio</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">Condición habilitante #1</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">5</div>
-<div class="step-content">
-<div class="step-title">Autorización BB/BACEN <button class="btn-ref" onclick="showClause('etapa4')">Ver Cláusula</button></div>
-<div class="step-desc">BB: Requisito obligatorio para Manifestar | BACEN: Solo condicionante temporal</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">⚠️ Sin BB no hay Manifestación. Sin BACEN se usan mecanismos alternativos al ejecutar put/call</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">6</div>
-<div class="step-content">
-<div class="step-title">Manifestación de Voluntad <button class="btn-ref" onclick="showClause('etapa5')">Ver Cláusula</button></div>
-<div class="step-desc">GPAT/BPAT compromiso firme e irrevocable del 100%</div>
-<div style="color:#e53e3e;font-size:0.85em;margin-top:5px;font-weight:bold;">🔴 ACTIVA DOBLE ESPEJO - Efectos plenos inmediatos</div>
-</div>
-</div>
-<div style="text-align:center;margin:10px 0;color:#667eea;font-size:1.2em;">→</div>
-<div class="timeline-step">
-<div class="step-number">7</div>
-<div class="step-content">
-<div class="step-title">Autorización Reguladores BCRA + BACEN <button class="btn-ref" onclick="showClause('etapa6')">Ver Cláusula</button></div>
-<div class="step-desc">SI autorizan AMBOS: Compra 51% USD 1 (precio fijo e inamovible) | Si alguno NO autoriza: Mecanismos alternativos</div>
-<div style="color:#667eea;font-size:0.85em;margin-top:5px;">Compromiso subsiste en todos los casos</div>
-</div>
-</div>
-</div>
-<div class="critical-deadline">
-            ⏰ <strong>Plazo crítico: 2 años impretermitibles desde la firma.</strong><br/>
-            Si GPAT/BPAT no cumplen las Condiciones Habilitantes para Manifestar dentro de este plazo, o si cumpliéndolas no emiten la Manifestación de Voluntad, la SPAS no podrá ser adquirida por GPAT/BPAT y se activa exclusivamente el Mecanismo Económico Sustituto, según Cláusulas 12 y 13 de la Carta de Entendimiento.
-        </div>
-</div>
 <!-- BLOQUE 6: RUTAS DE ADQUISICIÓN -->
 <div class="section" id="b9">
 <div class="section-title" style="background:linear-gradient(135deg,#38a169,#2f855a);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;">🛤️ RUTAS DE ADQUISICIÓN <span class="concept-key">Escenarios Post-Manifestación</span></div>
@@ -438,7 +471,8 @@ ESTRATEGIA SECUENCIAL SPAS
 </div>
 <span class="box-id">[9]</span>
 </div>
-</div><!-- BLOQUE: RUTA PESIMISTA -->
+</div>
+<!-- BLOQUE: RUTA PESIMISTA -->
 <div class="section" id="b8">
 <div class="section-title" style="background:linear-gradient(135deg,#c53030,#e53e3e);color:white;padding:20px;margin:-30px -30px 25px;border-radius:15px 15px 0 0;font-size:1.4em;font-weight:bold;">⚠️ RUTA PESIMISTA <span class="concept-key" style="background:rgba(255,255,255,0.25);">Escenario Pre-Manifestación</span></div>
 <div class="rutas-box" style="border-color:#e53e3e;">
@@ -1143,12 +1177,27 @@ function acceder() {
     try {
         localStorage.setItem('spas_usuario', valor);
     } catch (e) {
-        // ignorar errores de storage
+        // ignorar errores de almacenamiento
     }
 
     const screen = document.getElementById('access-screen');
     if (screen) {
         screen.style.display = 'none';
+    }
+
+    // Enviar registro de acceso a Google Apps Script (URL a definir)
+    try {
+        fetch("URL_DEL_WEBHOOK_A_DEFINIR", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                usuario: valor,
+                userAgent: navigator.userAgent || "",
+                fecha: new Date().toISOString()
+            })
+        });
+    } catch (e) {
+        console.error("Error enviando log de acceso", e);
     }
 }
 
